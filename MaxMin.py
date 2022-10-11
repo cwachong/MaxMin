@@ -5,8 +5,8 @@ import re
 import sys
 
 def maxMin(k, arr):
-    arr.sort()
-    unfair = 100**100
+    arr.sort() #Sort the array to get the two extreme ends
+    unfair = 100**100 #Set some enormous constant to compare to 
     
     for i in range(len(arr)-k+1):
         if ((arr[i+(k-1)]-arr[i]) < unfair):
